@@ -1,2 +1,11 @@
 *.def filter=lfs diff=lfs merge=lfs -text
 *.exe filter=lfs diff=lfs merge=lfs -text
+
+# 超过 GitHub 100MB 单文件硬限制的大文件，逐个指定走 LFS
+# （不用 *.dbf 通配，避免几百 KB 的小表也被 LFS 接管而浪费 LFS 带宽配额）
+new_flow1.dbf filter=lfs diff=lfs merge=lfs -text
+ODMatriix.dbf filter=lfs diff=lfs merge=lfs -text
+outputFlow.dbf filter=lfs diff=lfs merge=lfs -text
+joinedDest.dbf filter=lfs diff=lfs merge=lfs -text
+Export_Output.dbf filter=lfs diff=lfs merge=lfs -text
+zh_CN/DesktopChinese_CN1.cab filter=lfs diff=lfs merge=lfs -text
